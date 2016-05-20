@@ -2,17 +2,22 @@
   Pushwoosh = {};
 
   Pushwoosh.initPushwoosh = function() {
-    this.pushNotification =
-      cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
 
-    if (device.platform === "Android") {
-      this._initAndroid();
-    } else if (device.platform === "iOS") {
+    this.pushNotification = window.plugins.pushNotification;
+
+    // if (device.platform === "Android") {
+    //   this._initAndroid();
+    // } else if (device.platform === "iOS") {
       this._initIOs();
-    }
+    // }
 
     //reset badges on app start
     this.pushNotification.setApplicationIconBadgeNumber(0);
+  }
+
+  Pushwoosh.setIconBadgeNumber = function(nb) {
+    console.log('lpender:pushwoosh setIconBadgeNumber', nb);
+    this.pushNotification.setApplicationIconBadgeNumber(nb);
   }
 
   // This will trigger all pending push notifications on start.

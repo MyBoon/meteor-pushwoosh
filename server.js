@@ -67,7 +67,7 @@ Pushwoosh.createMessage = function(notifications) {
       console.log("lpender:pushwoosh:");
       console.error(error);
     } else {
-      console.log("lpender:pushwoosh: request completed successfully");
+      console.log("lpender:pushwoosh: request completed successfully", response);
     }
   });
 };

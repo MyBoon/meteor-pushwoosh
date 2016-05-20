@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'lpender:pushwoosh',
+  name: 'myboon:pushwoosh',
   summary: 'Send and receive push notifications via Pushwoosh',
   version: '2.1.6',
   git: 'https://github.com/lpender/meteor-pushwoosh.git'
