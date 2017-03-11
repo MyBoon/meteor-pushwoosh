@@ -18,8 +18,7 @@ Pushwoosh.createMessage = function(notifications) {
 
   var request = Npm.require('request');
 
-  console.log("lpender:pushwoosh : sending notifications")
-  console.log(notifications)
+  console.log("lpender:pushwoosh : sending notifications");
 
   // map devices onto notification
   notifications = notifications.map(function(notification) {
@@ -31,7 +30,6 @@ Pushwoosh.createMessage = function(notifications) {
     });
 
     console.log("lpender:pushwoosh : pushing to users");
-    console.log(users);
 
     users.forEach(function(user) {
       Array.prototype.push.apply(
@@ -40,8 +38,8 @@ Pushwoosh.createMessage = function(notifications) {
       );
     });
 
-    console.log("lpender:pushwoosh : pushing to devices")
-    console.log(devices)
+    console.log("lpender:pushwoosh : pushing to devices");
+    console.log(devices);
 
     notification.devices = devices;
 
@@ -67,7 +65,7 @@ Pushwoosh.createMessage = function(notifications) {
       console.log("lpender:pushwoosh:");
       console.error(error);
     } else {
-      console.log("lpender:pushwoosh: request completed successfully", response);
+      console.log("lpender:pushwoosh: request completed successfully");
     }
   });
 };
